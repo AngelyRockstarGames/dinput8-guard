@@ -1,0 +1,16 @@
+name: Build DLL
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Configure CMake
+      run: cmake -B ${{github.workspace}}/build -A Win32
+    - name: Build
+      run: cmake --build ${{github.workspace}}/build --config Release
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: dinput8-dll
+        path: build/Release/dinput8.dll
