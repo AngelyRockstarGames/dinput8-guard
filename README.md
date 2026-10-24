@@ -1,1 +1,1 @@
-# Inyeccion DLL Para launcher de Rockstar Games en GTA San Andreas by Aguslovers Comunity
+# intento de hacer inyeccion DLL en gta_sa (no funciono xd)
